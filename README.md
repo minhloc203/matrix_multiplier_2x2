@@ -9,9 +9,10 @@
 **test_case_names.txt**: Chứa tên hoặc nhãn mô tả của từng test case theo đúng thứ tự trong input_vectors.txt. Các nhãn giúp nhận biết bộ dữ liệu đang kiểm tra thuộc trường hợp nào, chẳng hạn số dương cơ bản, có số âm, ma trận đơn vị hoặc giá trị biên. Khi ModelSim in kết quả, tên test case giúp theo dõi và tìm nhanh trường hợp bị sai.
 
 **matmul2x2.mpf**: Là file project của ModelSim. File lưu danh sách các mã nguồn Verilog, testbench, thư viện work và thiết lập mô phỏng của dự án. Khi mở file này, người dùng có thể tiếp tục compile và chạy mô phỏng mà không cần tạo lại project từ đầu. File không chứa thuật toán nhân ma trận và cũng không phải file dùng để nạp lên FPGA.
-work/: Là thư mục thư viện làm việc do ModelSim tự tạo sau khi compile các module Verilog. Nó chứa dữ liệu trung gian đã biên dịch để chương trình mô phỏng có thể nạp và chạy thiết kế. Không nên chỉnh sửa thủ công thư mục này; nếu bị xóa, ModelSim có thể tạo lại khi compile project.
-**
-gen_test_vectors.py**: Là chương trình Python tạo dữ liệu kiểm tra cho dự án. Chương trình sinh các ma trận cố định hoặc ngẫu nhiên, kiểm tra mỗi phần tử có nằm trong phạm vi signed 8 bit và ghi dữ liệu vào input_vectors.txt. Nó đồng thời tạo nhiều trường hợp biên để kiểm tra đầy đủ khả năng xử lý số âm, số 0, giá trị lớn và nguy cơ tràn dữ liệu của mạch.
+
+**work/**: Là thư mục thư viện làm việc do ModelSim tự tạo sau khi compile các module Verilog. Nó chứa dữ liệu trung gian đã biên dịch để chương trình mô phỏng có thể nạp và chạy thiết kế. Không nên chỉnh sửa thủ công thư mục này; nếu bị xóa, ModelSim có thể tạo lại khi compile project.
+
+**gen_test_vectors.py**: Là chương trình Python tạo dữ liệu kiểm tra cho dự án. Chương trình sinh các ma trận cố định hoặc ngẫu nhiên, kiểm tra mỗi phần tử có nằm trong phạm vi signed 8 bit và ghi dữ liệu vào input_vectors.txt. Nó đồng thời tạo nhiều trường hợp biên để kiểm tra đầy đủ khả năng xử lý số âm, số 0, giá trị lớn và nguy cơ tràn dữ liệu của mạch.
 
 **show_matrices.py**: Là chương trình Python đọc dữ liệu và hiển thị các phần tử theo đúng dạng ma trận 2×2. File giúp người dùng quan sát rõ ma trận A, ma trận B và ma trận C thay vì đọc một dãy số liên tục, từ đó dễ kiểm tra hoặc trình bày kết quả hơn.
 
