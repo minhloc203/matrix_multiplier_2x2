@@ -1,0 +1,2 @@
+- vsim matrix_mult_2x2_tb
+- run -all
